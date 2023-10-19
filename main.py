@@ -10,9 +10,8 @@ TARGET_DATA_PATH = './data/followers_target.csv'
 def main() -> None: 
     sc_data = load_insta_data(SC_DATA_PATH)
     app = Dash(external_stylesheets=[BOOTSTRAP]) 
-    server = app.server
-    server.layout = create_layout(app, sc_data)
-    server.run_server(debug=False)
+    app.layout = create_layout(app, sc_data)
+    app.run_server(debug=True)
 
 
 if __name__ == "__main__":
