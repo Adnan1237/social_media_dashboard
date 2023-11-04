@@ -5,7 +5,7 @@ from dash.dependencies import Input, Output
 from . import ids
 from dashboard.data.loader import load_gender_split_data
 
-SC_DATA_PATH = r'C:\Users\adnan\OneDrive\Documents\dashboard_projects\social_media_dashboard\datasets\sc_social_media_master.csv'
+SC_DATA_PATH = 'datasets\sc_social_media_master.csv'
 
 sc_data = load_gender_split_data(SC_DATA_PATH)
 
