@@ -1,12 +1,15 @@
 import pandas as pd 
 from datetime import datetime
 
+SC_DATA_PATH = r'datasets\sc_social_media_master.csv'
+TARGET_DATA_PATH = r'datasets\followers_target.csv'
+
 def load_insta_data() -> pd.DataFrame: 
 
-    SC_DATA_PATH = r'datasets\sc_social_media_master.csv'
+    sc_full_data = SC_DATA_PATH
 
     sc_data = pd.read_csv(
-        SC_DATA_PATH
+        sc_full_data
     )
 
     date_format = "%d/%m/%Y"
@@ -20,11 +23,11 @@ def load_insta_data() -> pd.DataFrame:
 
 def load_follower_data(target_dt = 'JAN_2023') -> pd.DataFrame:
 
-    TARGET_DATA_PATH = r'datasets\followers_target.csv'
+    target_data = TARGET_DATA_PATH
     sc_data = load_insta_data()
 
     follower_data = pd.read_csv(
-        TARGET_DATA_PATH
+        target_data
     )
 
     current_followers = sc_data['followers_stand'].iloc[-1]
@@ -46,10 +49,10 @@ def load_follower_data(target_dt = 'JAN_2023') -> pd.DataFrame:
 
 def load_age_split_data(path: str) -> pd.DataFrame: 
     
-    SC_DATA_PATH = r'datasets\sc_social_media_master.csv'
+    sc_full_data = SC_DATA_PATH
 
     sc_data = pd.read_csv(
-        SC_DATA_PATH
+        sc_full_data
     )
 
     sc_data_age_avg = sc_data[['1317_followers', '1824_followers', '2534_followers', 
@@ -76,11 +79,11 @@ def load_age_split_data(path: str) -> pd.DataFrame:
 
 
 def load_gender_split_data(path: str) -> pd.DataFrame: 
-
-    SC_DATA_PATH = r'datasets\sc_social_media_master.csv'
+    
+    sc_full_data = SC_DATA_PATH
 
     sc_data = pd.read_csv(
-        SC_DATA_PATH
+        sc_full_data
     )
 
     sc_data_gender_avg = sc_data[['male_followers', 'female_followers']].mean().reset_index()
