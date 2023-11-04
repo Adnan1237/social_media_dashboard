@@ -1,11 +1,11 @@
 from dash import Dash, html 
 from dash_bootstrap_components.themes import BOOTSTRAP
-from components.layout import create_layout
-from data.loader import load_insta_data, load_follower_data
+from src.components.layout import create_layout
+from src.data.loader import load_insta_data, load_follower_data
 
 # DATA_PATH = './data/transactions.csv'
-SC_DATA_PATH = './datasets/sc_social_media_master.csv'
-TARGET_DATA_PATH = './datasets/followers_target.csv'
+SC_DATA_PATH = 'SOCIAL_MEDIA_DASHBOARD/datasets/sc_social_media_master.csv'
+TARGET_DATA_PATH = 'SOCIAL_MEDIA_DASHBOARD/datasets/followers_target.csv'
 
 def main() -> None: 
     sc_data = load_insta_data(SC_DATA_PATH)
