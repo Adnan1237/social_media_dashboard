@@ -3,9 +3,9 @@ import plotly.express as px
 from dash import Dash, dcc, html
 from dash.dependencies import Input, Output 
 from . import ids
-from src.data.loader import load_insta_data
+from data.loader import load_insta_data
 
-SC_DATA_PATH = './data/sc_social_media_master.csv'
+SC_DATA_PATH = './datasets/sc_social_media_master.csv'
 
 sc_data = load_insta_data(SC_DATA_PATH)
 

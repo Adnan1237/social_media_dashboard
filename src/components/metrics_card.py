@@ -1,8 +1,6 @@
 from dash import Dash, dcc, html 
 from dash.dependencies import Input, Output
 from . import ids
-from src.data.loader import load_insta_data
-
 
 def current_metric(data, metric) -> float: 
 
