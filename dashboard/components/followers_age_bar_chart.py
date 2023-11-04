@@ -5,9 +5,7 @@ from dash.dependencies import Input, Output
 from . import ids
 from dashboard.data.loader import load_age_split_data
 
-SC_DATA_PATH = 'datasets\sc_social_media_master.csv'
-
-sc_data = load_age_split_data(SC_DATA_PATH)
+sc_data = load_age_split_data()
 
 def render(app: Dash) -> html.Div:
 

@@ -1,32 +1,12 @@
 import pandas as pd 
 from datetime import datetime
 
-# class DataSchema: 
-#     AMOUNT = 'amount'
-#     CATEGORY = 'category'
-#     DATE = 'date'
-#     MONTH = 'month'
-#     YEAR = 'year'
+def load_insta_data() -> pd.DataFrame: 
 
-# def load_transaction_data(path: str) -> pd.DataFrame:
-
-#     data = pd.read_csv(
-#         path, 
-#         dtype={
-#             DataSchema.AMOUNT: float, 
-#             DataSchema.CATEGORY: str
-#         }, 
-#         parse_dates=[DataSchema.DATE]
-#     )
-#     data[DataSchema.YEAR] = data[DataSchema.DATE].dt.year.astype(str)
-#     data[DataSchema.MONTH] = data[DataSchema.DATE].dt.month.astype(str)
-#     return data 
-
-
-def load_insta_data(path: str) -> pd.DataFrame: 
+    SC_DATA_PATH = r'datasets\sc_social_media_master.csv'
 
     sc_data = pd.read_csv(
-        path
+        SC_DATA_PATH
     )
 
     date_format = "%d/%m/%Y"
@@ -38,10 +18,13 @@ def load_insta_data(path: str) -> pd.DataFrame:
     return sc_data 
 
 
-def load_follower_data(path: str, sc_data, target_dt = 'JAN_2023') -> pd.DataFrame:
+def load_follower_data(target_dt = 'JAN_2023') -> pd.DataFrame:
+
+    TARGET_DATA_PATH = r'datasets\followers_target.csv'
+    sc_data = load_insta_data()
 
     follower_data = pd.read_csv(
-        path
+        TARGET_DATA_PATH
     )
 
     current_followers = sc_data['followers_stand'].iloc[-1]
@@ -62,9 +45,11 @@ def load_follower_data(path: str, sc_data, target_dt = 'JAN_2023') -> pd.DataFra
 
 
 def load_age_split_data(path: str) -> pd.DataFrame: 
+    
+    SC_DATA_PATH = r'datasets\sc_social_media_master.csv'
 
     sc_data = pd.read_csv(
-        path
+        SC_DATA_PATH
     )
 
     sc_data_age_avg = sc_data[['1317_followers', '1824_followers', '2534_followers', 
@@ -92,8 +77,10 @@ def load_age_split_data(path: str) -> pd.DataFrame:
 
 def load_gender_split_data(path: str) -> pd.DataFrame: 
 
+    SC_DATA_PATH = r'datasets\sc_social_media_master.csv'
+
     sc_data = pd.read_csv(
-        path
+        SC_DATA_PATH
     )
 
     sc_data_gender_avg = sc_data[['male_followers', 'female_followers']].mean().reset_index()

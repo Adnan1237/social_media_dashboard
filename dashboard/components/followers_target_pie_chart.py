@@ -5,11 +5,8 @@ from dash.dependencies import Input, Output
 from . import ids
 from dashboard.data.loader import load_insta_data, load_follower_data
 
-SC_DATA_PATH = 'datasets\sc_social_media_master.csv'
-TARGET_DATA_PATH = 'datasets\followers_target.csv'
-
-sc_data = load_insta_data(SC_DATA_PATH)
-follower_data = load_follower_data(TARGET_DATA_PATH, sc_data)
+sc_data = load_insta_data()
+follower_data = load_follower_data()
 
 def render(app: Dash) -> html.Div:
 
