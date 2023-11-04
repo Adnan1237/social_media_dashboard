@@ -3,10 +3,10 @@ import plotly.express as px
 from dash import Dash, dcc, html
 from dash.dependencies import Input, Output 
 from . import ids
-from src.data.loader import load_insta_data, load_follower_data
+from dashboard.data.loader import load_insta_data, load_follower_data
 
-SC_DATA_PATH = './datasets/sc_social_media_master.csv'
-TARGET_DATA_PATH = './datasets/followers_target.csv'
+SC_DATA_PATH = 'datasets/sc_social_media_master.csv'
+TARGET_DATA_PATH = 'datasets/followers_target.csv'
 
 sc_data = load_insta_data(SC_DATA_PATH)
 follower_data = load_follower_data(TARGET_DATA_PATH, sc_data)

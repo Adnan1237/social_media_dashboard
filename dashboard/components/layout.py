@@ -6,7 +6,7 @@ from . import followers_age_bar_chart
 from . import followers_gender_pie_chart
 from . import impressions_reach_line_chart
 from . import followers_engagement_chart
-from src.components.metrics_card import current_metric, metric_compare_week
+from dashboard.components.metrics_card import current_metric, metric_compare_week
 
 
 def create_layout(app: Dash, data) -> html.Div: 
