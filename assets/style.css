@@ -1,0 +1,155 @@
+/* Basic CSS reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ensure html and body cover the full viewport */
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent horizontal overflow */
+}
+
+/* Styles for the parent container */
+.parent-container {
+    height: 100vh; /* Full viewport height */
+    width: 100vw;  /* Full viewport width */
+    background-color: black; /* Background color for visibility */
+    border: 2px solid green; /* Debug border to visualize parent dimensions */
+    overflow: hidden; /* Hide overflow */
+    margin: 0;
+    padding: 0;
+    position: relative; /* Ensure proper positioning context */
+}
+
+.container {
+    display: grid;
+    grid-template: 5% 40% 55% / 15% 20% 20% 45%;
+    grid-template-areas: 
+        "footer footer footer  footer"
+        "pie    bar1   bar2    stats"
+        "line   line   line    grid"; 
+    border: 3px solid lightgrey;
+    background-color: lightgrey;
+    row-gap: 10px;
+    column-gap: 10px;
+    justify-content: center;
+    align-content: center;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    border: 0;
+    padding: 20px;
+    overflow: hidden;
+    position: relative;
+    max-width: 100% !important;
+}
+
+.box {
+    background: gold;
+    height: 100%;
+    width: 100%;
+}
+
+#box-a {
+    grid-area: pie;
+}
+
+#box-b {
+    grid-area: bar1;
+}
+
+#box-c {
+    grid-area: bar2;
+}
+
+.imp-reach-section {
+    display: grid;
+    grid-area: stats;
+    grid-template: 42% 58% / 50% 50%;
+    grid-template-areas: 
+        "impressions reach"
+        "chart       chart";
+    border: 3px solid lightgrey;
+    background-color: lightgrey;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    border: 0;
+    overflow: hidden;
+    position: relative;
+    max-width: 100% !important;
+    background: white;
+}
+
+#box-d1 {
+    grid-area: impressions;
+    border: 2px solid lightgrey;
+}
+
+#box-d2 {
+    grid-area: reach;
+    border: 3px solid lightgrey;
+}
+
+#box-d3 {
+    grid-area: chart;
+    border: 3px solid lightgrey;
+}
+
+#box-e {
+    grid-area: line;
+}
+
+#box-g {
+    grid-area: footer;
+}
+
+.eng-section {
+    display: grid;
+    grid-area: grid;
+    grid-template: 30% 70% / 25% 25% 25% 25%;
+    grid-template-areas: 
+        "likes  comments shares  saves"
+        "e-line e-line   e-line  e-line";
+    border: 3px solid lightgrey;
+    background-color: lightgrey;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    border: 0;
+    overflow: hidden;
+    position: relative;
+    max-width: 100% !important;
+    background: white;
+}
+
+#box-f1 {
+    grid-area: likes;
+    border: 2px solid lightgrey;
+}
+
+#box-f2 {
+    grid-area: comments;
+    border: 3px solid lightgrey;
+}
+
+#box-f3 {
+    grid-area: shares;
+    border: 3px solid lightgrey;
+}
+
+#box-f4 {
+    grid-area: saves;
+    border: 2px solid lightgrey;
+}
+
+#box-f5 {
+    grid-area: e-line;
+    border: 2px solid lightgrey;
+}
+
