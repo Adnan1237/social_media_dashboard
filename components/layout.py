@@ -5,6 +5,7 @@ from . import followers_gender_pie_chart
 from . import followers_count_line_chart
 from . import impressions_reach_line_chart
 from . import engagement_score_line_chart
+from . import insight_bot_box
 from components.metrics_item_structure import metrics_item_structure
 
 def create_layout(app: Dash) -> html.Div:
@@ -23,9 +24,7 @@ def create_layout(app: Dash) -> html.Div:
                             html.Div(followers_age_bar_chart.render(app), className="box", id="bar-age")
                         ]
                     ),
-                    html.Div(
-                        id="insightbot"
-                    ),
+                    html.Div(insight_bot_box.render(app), id="insightbot"),
                     html.Div(
                         className="imp-reach-section", 
                         id="box-d", 

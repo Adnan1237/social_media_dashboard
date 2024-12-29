@@ -1,8 +1,5 @@
 import plotly.express as px 
 from dash import Dash, dcc, html
-# from . import ids
-# from . import metrics_item_structure
-# from . import eng_metrics_predictions
 from . import loader
 
 sc_data = loader.load_insta_data()
