@@ -1,0 +1,25 @@
+QUERY_NUMBER,QUERY
+query_1,"The week starting from 09/10/2022 had the highest number of followers, with a total of 9676."
+query_2,"The week starting from 11/09/2022 had the lowest number of followers, with a total of 1270."
+query_3,The average number of followers per week is 5375.
+query_4,"The week starting from 07/05/2023 had the highest number of impressions, with a total of 48261."
+query_5,"The week starting from 18/09/2022 had the lowest number of impressions, with a total of 10036."
+query_6,The average number of impressions per week is 27517.
+query_7,"The week starting from 13/11/2022 had the highest number of reach, with a total of 29728."
+query_8,"The week starting from 11/12/2022 had the lowest number of reach, with a total of 10189."
+query_9,The average number of reach per week is 19307.
+query_10,"The week starting from 27/11/2022 had the highest number of additional_followers, with a total of 388."
+query_11,"The week starting from 21/08/2022 had the lowest number of additional_followers, with a total of 50."
+query_12,The average number of additional_followers per week is 207.
+query_13,"The week starting from 23/04/2023 had the highest number of likes, with a total of 99."
+query_14,"The week starting from 07/08/2022 had the lowest number of likes, with a total of 0."
+query_15,The average number of likes per week is 55.
+query_16,"The week starting from 05/02/2023 had the highest number of comments, with a total of 100."
+query_17,"The week starting from 23/10/2022 had the lowest number of comments, with a total of 0."
+query_18,The average number of comments per week is 49.
+query_19,"The week starting from 19/02/2023 had the highest number of shares, with a total of 98."
+query_20,"The week starting from 13/11/2022 had the lowest number of shares, with a total of 0."
+query_21,The average number of shares per week is 50.
+query_22,"The week starting from 19/02/2023 had the highest number of saves, with a total of 100."
+query_23,"The week starting from 25/09/2022 had the lowest number of saves, with a total of 5."
+query_24,The average number of saves per week is 50.
