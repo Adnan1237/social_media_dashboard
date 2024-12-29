@@ -30,9 +30,9 @@ html, body {
     display: grid;
     grid-template: 5% 40% 55% / 15% 20% 20% 45%;
     grid-template-areas: 
-        "footer footer footer  footer"
-        "pie    bar1   bar2    stats"
-        "line   line   line    grid"; 
+        "footer        footer        footer      footer"
+        "demographics  demographics  insightbot  stats"
+        "line          line          line        grid"; 
     border: 3px solid lightgrey;
     background-color: lightgrey;
     row-gap: 10px;
@@ -55,16 +55,44 @@ html, body {
     width: 100%;
 }
 
-#box-a {
-    grid-area: pie;
+.demographic-section {
+    display: grid;
+    grid-area: demographics;
+    grid-template: 42% 58% / 50% 50%;
+    grid-template-areas: 
+        "pie-target-section pie-gender-section"
+        "bar-age-section    bar-age-section";
+    border: 3px solid lightgrey;
+    background-color: lightgrey;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    border: 0;
+    overflow: hidden;
+    position: relative;
+    max-width: 100% !important;
+    background: white;
 }
 
-#box-b {
-    grid-area: bar1;
+#pie-target {
+    grid-area: pie-target-section;
+    border: 2px solid lightgrey;
 }
 
-#box-c {
-    grid-area: bar2;
+#pie-gender {
+    grid-area: pie-gender-section;
+    border: 3px solid lightgrey;
+}
+
+#bar-age {
+    grid-area: bar-age-section;
+    border: 3px solid lightgrey;
+}
+
+#insightbot {
+    grid-area: insightbot;
+    border: 3px solid lightgrey;
+    background: white;
 }
 
 .imp-reach-section {

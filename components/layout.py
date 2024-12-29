@@ -15,9 +15,17 @@ def create_layout(app: Dash) -> html.Div:
             html.Div(
                 className="container",
                 children=[
-                    html.Div(followers_target_pie_chart.render(app), className="box", id="box-a"),
-                    html.Div(followers_age_bar_chart.render(app), className="box", id="box-b"),
-                    html.Div(followers_gender_pie_chart.render(app), className="box", id="box-c"),
+                    html.Div(
+                        className='demographic-section', 
+                        children=[
+                            html.Div(followers_target_pie_chart.render(app), className="box", id="pie-target"),
+                            html.Div(followers_gender_pie_chart.render(app), className="box", id="pie-gender"), 
+                            html.Div(followers_age_bar_chart.render(app), className="box", id="bar-age")
+                        ]
+                    ),
+                    html.Div(
+                        id="insightbot"
+                    ),
                     html.Div(
                         className="imp-reach-section", 
                         id="box-d", 
